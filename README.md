@@ -1,5 +1,7 @@
 # GAIA – Great Awakening Intelligence Atlas
 
+**Live Website:** [Click here to access the website](https://gaia.netlify.app)
+
 ## Overview
 
 The **Great Awakening Intelligence Atlas (GAIA)** is a data visualization and knowledge organization project that transforms the original Great Awakening Map into a structured, searchable dataset. The project involved manually extracting information from the map, organizing it into a relational Excel dataset, and developing an interactive Power BI dashboard to analyze nodes, clusters, categories, and relationships. Rather than presenting the map as a static infographic, the project converts it into a navigable knowledge base for exploration and pattern analysis.
@@ -68,11 +70,11 @@ The following screenshots show a portion of the manually structured dataset used
 
 ---
 
-## Power BI Dashboard Demonstration
+## Dashboard Demonstration
 
-A short walkthrough video demonstrates the interactive features of the Power BI dashboard, including filtering, cross-highlighting, drill-down navigation, and exploration of the dataset.
+A short demonstration showcasing the interactive features of the Power BI dashboard, including filtering, cross-highlighting, and navigation.
 
-<video src="images/dashboard_demo.mp4" controls width="800"></video>
+[Watch Dashboard Demo](images/dashboard_demo.mp4)
 
 ---
 
