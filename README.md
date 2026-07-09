@@ -55,18 +55,16 @@ The dashboard includes:
 The following screenshots demonstrate different stages of the project, from data preparation to interactive visualization.
 
 ### Website Preview
-The website was first framed-out on Figma
-```markdown
+The website was first designed in Figma before development.
 ![Homepage](images/homepage.png)
-```
 
-### Sample Excel Dataset
+## Sample Excel Dataset
 
-```markdown
+The following screenshots show a portion of the manually structured dataset used to build the Power BI dashboard.
+
 ![Excel Sample 1](images/sample_excel_1.png)
 
-![Excel Sample 2](Images/sample_excel_2.png)
-```
+![Excel Sample 2](images/sample_excel_2.png)
 
 ---
 
@@ -74,9 +72,7 @@ The website was first framed-out on Figma
 
 A short walkthrough video demonstrates the interactive features of the Power BI dashboard, including filtering, cross-highlighting, drill-down navigation, and exploration of the dataset.
 
-```markdown
-[Dashboard Demonstration](Video/dashboard_demo.mp4)
-```
+[Dashboard Demonstration](images/dashboard_demo.mp4)
 
 ---
 
@@ -94,9 +90,9 @@ The project combines spreadsheet-based data preparation with business intelligen
 
 ## Dataset Summary
 
-```markdown
-![Dashboard](images/dashboard.png)
-```
+![Dashboard](images/dashboard01.png)
+
+![Dashboard](images/dashboard02.png)
 
 ---
 
