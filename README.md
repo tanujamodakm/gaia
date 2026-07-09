@@ -1,6 +1,6 @@
 # GAIA – Great Awakening Intelligence Atlas
 
-**Live Website:** [Click here to access the website](https://gaia.netlify.app)
+**Live Website:** [Click here to access the website](https://gaiacp.netlify.app/)
 
 ## Overview
 
