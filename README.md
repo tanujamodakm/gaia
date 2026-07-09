@@ -74,7 +74,7 @@ The following screenshots show a portion of the manually structured dataset used
 
 A short demonstration showcasing the interactive features of the Power BI dashboard, including filtering, cross-highlighting, and navigation.
 
-[Watch Dashboard Demo](images/dashboard_demo.gif)
+![Dashboard Demo](images/dashboard_demo.gif)
 
 ---
 
