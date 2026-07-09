@@ -57,7 +57,7 @@ The following screenshots demonstrate different stages of the project, from data
 ### Website Preview
 The website was first framed-out on Figma
 ```markdown
-![Homepage](Images/homepage.png)
+![Homepage](images/homepage.png)
 ```
 
 ### Sample Excel Dataset
