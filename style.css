@@ -1,0 +1,873 @@
+/* ==========================================
+   GAIA WEBSITE
+   style.css
+==========================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    background: #ffffff;
+    color: #222;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #e6f8f7;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #11b5ae;
+    border-radius: 20px;
+
+}
+
+/* ==========================================
+HEADER
+==========================================*/
+
+header {
+
+    height: 70px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 40px;
+
+    background: white;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 999;
+
+}
+
+.logo {
+
+    color: #10b9b0;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+.menu-btn {
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    border: 2px solid #ddd;
+
+    background: white;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.menu-btn:hover {
+
+    background: #10b9b0;
+
+    color: white;
+
+}
+
+/* ==========================================
+HERO
+==========================================*/
+
+.hero {
+
+    background: #11b5ae;
+
+    padding: 35px;
+
+}
+
+.hero-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+
+}
+
+.welcome-card {
+
+    background: #46d4ce;
+
+    padding: 25px;
+
+    border: 4px solid #14a8a3;
+
+    color: white;
+
+    min-height: 240px;
+
+}
+
+.welcome-card h1 {
+
+    font-family: 'Bebas Neue';
+
+    letter-spacing: 2px;
+
+    font-size: 52px;
+
+    margin-bottom: 18px;
+
+}
+
+.subtitle {
+
+    background: white;
+
+    color: #4a4a4a;
+
+    text-align: center;
+
+    font-weight: 600;
+
+    padding: 10px;
+
+    margin-bottom: 18px;
+
+}
+
+.welcome-card p {
+
+    font-size: 17px;
+
+}
+
+/* RIGHT */
+
+.about-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+
+}
+
+.quote {
+
+    background: white;
+
+    padding: 25px;
+
+    color: #159a93;
+
+    text-align: center;
+
+    font-family: 'Caveat', cursive;
+
+    font-size: 26px;
+
+    border: 4px solid #14a8a3;
+
+}
+
+.what-box {
+
+    background: white;
+
+    padding: 20px;
+
+    border: 4px solid #14a8a3;
+
+    flex: 1;
+
+}
+
+.what-box h2 {
+
+    color: #10b9b0;
+
+    font-size: 42px;
+
+    font-family: 'Bebas Neue';
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+
+}
+
+.what-box p {
+
+    text-align: center;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+/* ==========================================
+Hero Footer
+==========================================*/
+
+.hero-footer {
+
+    margin-top: 18px;
+
+    background: white;
+
+    padding: 14px;
+
+    text-align: center;
+
+    font-style: italic;
+
+    color: #008d87;
+
+    border-left: 6px solid #14a8a3;
+
+    font-size: 18px;
+
+}
+
+/* ==========================================
+Signature
+==========================================*/
+
+.signature {
+
+    padding: 45px 0 20px;
+
+    text-align: center;
+
+}
+
+.signature img {
+
+    width: 250px;
+
+}
+
+/* ==========================================
+MAP SECTION
+==========================================*/
+
+.map-section {
+
+    text-align: center;
+
+    padding: 10px 0 50px;
+
+}
+
+.gaia-map {
+
+    width: 92%;
+
+    max-width: 1200px;
+
+    border: 1px solid #ddd;
+
+    transition: .5s;
+
+}
+
+.gaia-map:hover {
+
+    transform: scale(1.01);
+
+}
+
+.map-btn {
+
+    margin-top: 35px;
+
+    padding: 14px 35px;
+
+    border: 3px solid #444;
+
+    background: white;
+
+    cursor: pointer;
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+
+    transition: .35s;
+
+}
+
+.map-btn:hover {
+
+    background: #10b9b0;
+
+    color: white;
+
+    border-color: #10b9b0;
+
+}
+
+/* ==========================================
+DESCRIPTION
+==========================================*/
+
+.description {
+
+    background: #11b5ae;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 55px 12%;
+
+}
+
+.description p {
+
+    margin-bottom: 25px;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+}
+
+/* ==========================================
+COMMON SECTION TITLE
+==========================================*/
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+.section-title h2 {
+
+    font-size: 56px;
+
+    font-weight: 300;
+
+    margin-bottom: 10px;
+
+}
+
+.section-title span {
+
+    color: #777;
+
+    font-style: italic;
+
+    font-size: 18px;
+
+}
+/* ==========================================
+DASHBOARD SECTION
+==========================================*/
+
+.dashboard-section {
+
+    padding: 80px 5%;
+    background: #f8f8f8;
+
+}
+
+.dashboard-container {
+
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: white;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
+
+}
+
+.dashboard-container iframe {
+
+    width: 100%;
+    height: 900px;
+    border: none;
+
+}
+
+.dashboard-text {
+
+    background: #11b5ae;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+}
+
+/* ==========================================
+NETWORK SECTION
+==========================================*/
+
+.network-section {
+
+    padding: 80px 5%;
+
+    background: white;
+
+}
+
+/* ==========================================
+FOOTER
+==========================================*/
+
+footer {
+
+    background: #111;
+
+    color: white;
+
+    padding: 40px 20px;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+footer div:first-child {
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+}
+
+footer div:last-child {
+
+    color: #aaa;
+
+}
+
+/* ==========================================
+BACK TO TOP BUTTON
+==========================================*/
+
+#topBtn {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    width: 55px;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #10b9b0;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .35s;
+
+    z-index: 999;
+
+}
+
+#topBtn.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+#topBtn:hover {
+
+    transform: translateY(-4px);
+
+}
+
+/* ==========================================
+ANIMATIONS
+==========================================*/
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(40px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+.hero,
+.signature,
+.map-section,
+.description,
+.dashboard-section,
+.network-section {
+
+    animation: fadeUp .8s ease;
+
+}
+
+/* ==========================================
+HOVER EFFECTS
+==========================================*/
+
+.welcome-card,
+.quote,
+.what-box {
+
+    transition: .4s;
+
+}
+
+.welcome-card:hover,
+.quote:hover,
+.what-box:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .12);
+
+}
+
+.dashboard-container {
+
+    transition: .4s;
+
+}
+
+.dashboard-container:hover {
+
+    transform: translateY(-3px);
+
+}
+
+/* ==========================================
+TABLET
+==========================================*/
+
+@media(max-width:992px) {
+
+    .hero-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .welcome-card h1 {
+
+        font-size: 42px;
+
+    }
+
+    .what-box h2 {
+
+        font-size: 34px;
+
+    }
+
+    .section-title h2 {
+
+        font-size: 42px;
+
+    }
+
+    .dashboard-container iframe {
+
+        height: 700px;
+
+    }
+
+}
+
+/* ==========================================
+MOBILE
+==========================================*/
+
+@media(max-width:768px) {
+
+    header {
+
+        padding: 0 20px;
+
+    }
+
+    .logo {
+
+        font-size: 22px;
+
+    }
+
+    .hero {
+
+        padding: 20px;
+
+    }
+
+    .welcome-card {
+
+        padding: 20px;
+
+    }
+
+    .welcome-card h1 {
+
+        font-size: 36px;
+
+        text-align: center;
+
+    }
+
+    .subtitle {
+
+        font-size: 14px;
+
+    }
+
+    .quote {
+
+        font-size: 20px;
+
+        padding: 20px;
+
+    }
+
+    .what-box h2 {
+
+        font-size: 30px;
+
+        text-align: center;
+
+    }
+
+    .what-box p {
+
+        font-size: 14px;
+
+    }
+
+    .hero-footer {
+
+        font-size: 15px;
+
+    }
+
+    .signature img {
+
+        width: 180px;
+
+    }
+
+    .gaia-map {
+
+        width: 96%;
+
+    }
+
+    .map-btn {
+
+        width: 90%;
+
+        max-width: 300px;
+
+    }
+
+    .description {
+
+        padding: 40px 8%;
+
+    }
+
+    .description p {
+
+        font-size: 15px;
+
+    }
+
+    .section-title h2 {
+
+        font-size: 36px;
+
+    }
+
+    .section-title span {
+
+        font-size: 14px;
+
+    }
+
+    .dashboard-container iframe {
+
+        height: 600px;
+
+    }
+
+    .dashboard-text {
+
+        font-size: 15px;
+
+        padding: 25px;
+
+    }
+
+}
+
+/* ==========================================
+SMALL PHONES
+==========================================*/
+
+@media(max-width:480px) {
+
+    .welcome-card h1 {
+
+        font-size: 30px;
+
+    }
+
+    .what-box h2 {
+
+        font-size: 26px;
+
+    }
+
+    .section-title h2 {
+
+        font-size: 30px;
+
+    }
+
+    .dashboard-container iframe {
+
+        height: 500px;
+
+    }
+
+    #topBtn {
+
+        width: 45px;
+        height: 45px;
+
+        font-size: 16px;
+
+    }
+
+}
+
+/* ==========================================
+EXTRA POLISH
+==========================================*/
+
+iframe {
+
+    display: block;
+
+}
+
+img {
+
+    max-width: 100%;
+
+}
+
+button {
+
+    font-family: 'Poppins', sans-serif;
+
+}
+
+a {
+
+    text-decoration: none;
+
+}
+
+ul {
+
+    list-style: none;
+
+}
+
+/* ==========================================
+END OF FILE
+==========================================*/
