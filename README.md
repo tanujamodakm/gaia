@@ -63,7 +63,7 @@ The website was first framed-out on Figma
 ### Sample Excel Dataset
 
 ```markdown
-![Excel Sample 1](Images/sample_excel_1.png)
+![Excel Sample 1](images/sample_excel_1.png)
 
 ![Excel Sample 2](Images/sample_excel_2.png)
 ```
@@ -95,7 +95,7 @@ The project combines spreadsheet-based data preparation with business intelligen
 ## Dataset Summary
 
 ```markdown
-![Dashboard](Images/dashboard.png)
+![Dashboard](images/dashboard.png)
 ```
 
 ---
