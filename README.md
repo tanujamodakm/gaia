@@ -72,7 +72,7 @@ The following screenshots show a portion of the manually structured dataset used
 
 A short walkthrough video demonstrates the interactive features of the Power BI dashboard, including filtering, cross-highlighting, drill-down navigation, and exploration of the dataset.
 
-[Dashboard Demonstration](images/dashboard_demo.mp4)
+<video src="images/dashboard_demo.mp4" controls width="800"></video>
 
 ---
 
