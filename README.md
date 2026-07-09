@@ -30,7 +30,6 @@ The final dataset includes:
 * Categories and Subcategories
 * Position and Layout information
 * Relationship metadata
-* Network hierarchy levels
 
 ---
 
@@ -56,7 +55,7 @@ The dashboard includes:
 The following screenshots demonstrate different stages of the project, from data preparation to interactive visualization.
 
 ### Website Preview
-
+The website was first framed-out on Figma
 ```markdown
 ![Homepage](Images/homepage.png)
 ```
@@ -67,8 +66,6 @@ The following screenshots demonstrate different stages of the project, from data
 ![Excel Sample 1](Images/sample_excel_1.png)
 
 ![Excel Sample 2](Images/sample_excel_2.png)
-
-![Excel Sample 3](Images/sample_excel_3.png)
 ```
 
 ### Power BI Dashboard
@@ -79,7 +76,7 @@ The following screenshots demonstrate different stages of the project, from data
 
 ---
 
-## Dashboard Demonstration
+## Power BI Dashboard Demonstration
 
 A short walkthrough video demonstrates the interactive features of the Power BI dashboard, including filtering, cross-highlighting, drill-down navigation, and exploration of the dataset.
 
@@ -103,61 +100,15 @@ The project combines spreadsheet-based data preparation with business intelligen
 
 ## Dataset Summary
 
-The completed dataset contains the following information.
-
-| Metric              | Count |
-| ------------------- | ----: |
-| Total Nodes         |   908 |
-| Total Categories    |   186 |
-| Total Clusters      |   219 |
-| Total Subcategories |   573 |
-
----
-
-## Key Features
-
-The project demonstrates the complete workflow from manual data preparation to interactive visualization.
-
-* Manual data extraction from a large visual map
-* Hierarchical dataset organization
-* Parent–Child relationship modeling
-* Structured categorization
-* Interactive Power BI dashboard
-* Network relationship analysis
-* Searchable knowledge graph
+```markdown
+![Dashboard](Images/dashboard.png)
+```
 
 ---
 
 ## Learning Experience
 
 This project marked my first experience using Microsoft Power BI. Coming from a background of working primarily with Microsoft Excel, it provided an opportunity to understand how business intelligence platforms extend traditional spreadsheet analysis. While Excel is effective for data organization, calculations, and static reporting, Power BI introduces interactive visualizations, data modeling, cross-filtering, dynamic dashboards, and drill-down analysis. Working on this project helped me understand the advantages of transforming structured datasets into interactive analytical reports that make complex information easier to explore and interpret.
-
----
-
-## Repository Structure
-
-```text
-GAIA/
-│
-├── Dashboard/
-│   └── GAIA.pbix
-│
-├── Dataset/
-│   ├── GAIA_Dataset.xlsx
-│   └── Sample_Excel.xlsx
-│
-├── Images/
-│   ├── homepage.png
-│   ├── dashboard.png
-│   ├── sample_excel_1.png
-│   ├── sample_excel_2.png
-│   └── sample_excel_3.png
-│
-├── Video/
-│   └── dashboard_demo.mp4
-│
-└── README.md
-```
 
 ---
 
