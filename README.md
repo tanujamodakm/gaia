@@ -68,12 +68,6 @@ The website was first framed-out on Figma
 ![Excel Sample 2](Images/sample_excel_2.png)
 ```
 
-### Power BI Dashboard
-
-```markdown
-![Dashboard](Images/dashboard.png)
-```
-
 ---
 
 ## Power BI Dashboard Demonstration
