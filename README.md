@@ -58,6 +58,7 @@ The following screenshots demonstrate different stages of the project, from data
 
 ### Website Preview
 The website was first designed in Figma before development.
+
 ![Homepage](images/homepage.png)
 
 ## Sample Excel Dataset
@@ -106,17 +107,6 @@ This project marked my first experience using Microsoft Power BI. Coming from a 
 
 ---
 
-## Future Improvements
-
-The project can be further enhanced by expanding both the dataset and analytical capabilities.
-
-* Publish the dashboard using Power BI Service.
-* Implement advanced network graph visualizations.
-* Integrate graph database technologies such as Neo4j.
-* Automate data extraction using OCR and Natural Language Processing.
-* Add advanced search and relationship tracing.
-
----
 
 ## Acknowledgement
 
