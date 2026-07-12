@@ -4,6 +4,11 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+html,
+body{
+    height:100%;
+    overflow-x:hidden;
+}
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -608,15 +613,21 @@ footer a:hover {
 }
 
 #gaia-chat-window{
-    position:fixed !important;
-    inset:10px !important;
-    width:auto !important;
-    height:auto !important;
-    display:flex;
-    flex-direction:column;
-    background:#fff;
-    border-radius:18px;
-    z-index:999999;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+
+    display: none;
+    flex-direction: column;
+
+    background: #fff;
+    border-radius: 18px;
+
+    z-index: 999999;
+
+    overflow: hidden;
 }
 
 .gaia-header {
@@ -812,27 +823,27 @@ footer a:hover {
 }
 
 @media (max-width:768px){
+
     #gaia-chat-window{
 
+        top: env(safe-area-inset-top,10px);
         left:10px;
         right:10px;
-        width:auto;
         bottom:10px;
-        height:85vh;
-        max-height:85vh;
+
+        width:auto;
+        height:auto;
+
         border-radius:18px;
     }
 
+    #gaia-messages{
+        flex:1;
+        overflow-y:auto;
+    }
+
     .gaia-input{
-        padding:10px;
+        flex-shrink:0;
     }
 
-    .gaia-input input{
-        font-size:16px;
-    }
-
-    .gaia-bot,
-    .gaia-user{
-        font-size:15px;
-    }
 }
