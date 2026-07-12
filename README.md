@@ -103,6 +103,12 @@ The project combines spreadsheet-based data preparation with business intelligen
 
 ---
 
+## GAIA AI Assistant
+
+Alongside the interactive dashboard, the project includes **GAIA AI**, a conversational assistant that enables users to explore the atlas using natural language. Instead of manually searching through nodes and relationships, users can ask questions about concepts, categories, clusters, and connections directly through the chat interface. The assistant retrieves relevant information from the structured dataset and generates contextual responses using the Gemini API, providing a more intuitive way to navigate and understand the Great Awakening Intelligence Atlas.
+
+![GAIA AI Chatbot](images/gaia-chatbot.png)
+
 ## Learning Experience
 
 This project marked my first experience using Microsoft Power BI. Coming from a background of working primarily with Microsoft Excel, it provided an opportunity to understand how business intelligence platforms extend traditional spreadsheet analysis. While Excel is effective for data organization, calculations, and static reporting, Power BI introduces interactive visualizations, data modeling, cross-filtering, dynamic dashboards, and drill-down analysis. Working on this project helped me understand the advantages of transforming structured datasets into interactive analytical reports that make complex information easier to explore and interpret.
