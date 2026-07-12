@@ -609,17 +609,19 @@ footer a:hover {
 
 #gaia-chat-window {
     position: fixed;
-    right: 25px;
-    bottom: 110px;
-    width: 400px;
-    height: 600px;
-    background: #fff;
+    bottom: 90px;
+    right: 20px;
+    width: 420px;
+    max-width: calc(100vw - 20px);
+    height: 650px;
+    max-height: calc(100vh - 120px);
+    background: white;
     border-radius: 20px;
+    overflow: hidden;
     display: none;
     flex-direction: column;
-    overflow: hidden;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, .25);
-    z-index: 99999;
+    box-shadow: 0 12px 35px rgba(0,0,0,.18);
+    z-index: 9999;
 }
 
 .gaia-header {
@@ -812,4 +814,30 @@ footer a:hover {
             0 0 10px rgba(17, 181, 174, .05);
     }
 
+}
+
+@media (max-width:768px){
+    #gaia-chat-window{
+
+        left:10px;
+        right:10px;
+        width:auto;
+        bottom:10px;
+        height:85vh;
+        max-height:85vh;
+        border-radius:18px;
+    }
+
+    .gaia-input{
+        padding:10px;
+    }
+
+    .gaia-input input{
+        font-size:16px;
+    }
+
+    .gaia-bot,
+    .gaia-user{
+        font-size:15px;
+    }
 }
