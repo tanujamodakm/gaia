@@ -607,21 +607,16 @@ footer a:hover {
     transform: scale(1.08);
 }
 
-#gaia-chat-window {
-    position: fixed;
-    bottom: 90px;
-    right: 20px;
-    width: 420px;
-    max-width: calc(100vw - 20px);
-    height: 650px;
-    max-height: calc(100vh - 120px);
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    display: none;
-    flex-direction: column;
-    box-shadow: 0 12px 35px rgba(0,0,0,.18);
-    z-index: 9999;
+#gaia-chat-window{
+    position:fixed !important;
+    inset:10px !important;
+    width:auto !important;
+    height:auto !important;
+    display:flex;
+    flex-direction:column;
+    background:#fff;
+    border-radius:18px;
+    z-index:999999;
 }
 
 .gaia-header {
