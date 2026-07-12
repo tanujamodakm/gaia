@@ -34,9 +34,8 @@ function greetingReply(text) {
 }
 
 async function askGAIA(question) {
-
     console.log("Sending:", question);
-    const API = "https://gaia-nkv5.onrender.com/";
+    const API = "https://gaia-nkv5.onrender.com/ask";
     const response = await fetch(API, {
         method: "POST",
         headers: {
@@ -45,16 +44,22 @@ async function askGAIA(question) {
         body: JSON.stringify({
             question: question
         })
-    })
+    });
 
     console.log("Status:", response.status);
+    if (!response.ok) {
+
+        const errorText = await response.text();
+        console.error("Server Error:", errorText);
+        throw new Error(errorText);
+    }
+
     const data = await response.json();
-    console.log(data);
+    console.log("Response:", data);
     return marked.parse(data.answer);
 }
 
 let currentRequest = 0;
-
 async function sendMessage() {
     const input =
         document.getElementById(
