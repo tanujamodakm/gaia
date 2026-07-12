@@ -160,11 +160,11 @@ Ask me anything about the map.
 
     }
     catch (error) {
-        console.error(error);
-        const bubble =
-            document.getElementById(typingId);
-        if (bubble) {
-            bubble.innerHTML = `
+    console.error("GAIA Error:", error);
+    const bubble =
+        document.getElementById(typingId);
+    if (bubble) {
+        bubble.innerHTML = `
         <strong>⚠️ GAIA is temporarily underconstruction.</strong>
 
         <br><br>
