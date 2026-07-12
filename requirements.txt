@@ -1,0 +1,9 @@
+Flask
+flask-cors
+pandas
+numpy
+sentence-transformers
+google-generativeai
+python-dotenv
+openpyxl
+torch
