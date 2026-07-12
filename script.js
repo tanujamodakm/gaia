@@ -1,96 +1,280 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const topBtn = document.getElementById("topBtn");
-    if (topBtn) {
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 300) {
-                topBtn.classList.add("show");
-            } else {
-                topBtn.classList.remove("show");
-            }
-        });
+let gaiaData = [];
 
-        topBtn.addEventListener("click", () => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
-    }
+fetch("gaia_dataset.json")
+    .then(res => res.json())
+    .then(data => {
+        gaiaData = data;
+        console.log(
+            "GAIA Dataset Loaded:",
+            gaiaData.length
+        );
 
-    const cards = document.querySelectorAll(
-        ".welcome-card, .quote, .what-box"
-    );
+    })
+    .catch(error => {
 
-    cards.forEach(card => {
-        card.addEventListener("mouseenter", () => {
-            card.style.transform = "translateY(-8px)";
-        });
-
-        card.addEventListener("mouseleave", () => {
-            card.style.transform = "translateY(0)";
-        });
+        console.error(
+            "Dataset Load Error:",
+            error
+        );
     });
 
-    const sections = document.querySelectorAll(
-        ".hero, .map-section, .downloads, .description, .dashboard-section, .network-section, .contact-section"
+function greetingReply(text) {
+    const greetings = [
+        "hi",
+        "hello",
+        "hey",
+        "good morning",
+        "good evening",
+        "how are you"
+    ];
+
+    return greetings.includes(
+        text.toLowerCase().trim()
     );
+}
 
-    sections.forEach(section => {
-        section.style.opacity = "0";
-        section.style.transform = "translateY(40px)";
-        section.style.transition = "all .8s ease";
-    });
+async function askGAIA(question) {
 
-    function revealSections() {
-        sections.forEach(section => {
-            const top = section.getBoundingClientRect().top;
+    console.log("Sending:", question);
+    const API = "http://127.0.0.1:5000/ask";
+    const response = await fetch(API, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            question: question
+        })
+    })
 
-            if (top < window.innerHeight - 100) {
-                section.style.opacity = "1";
-                section.style.transform = "translateY(0)";
-            }
-        });
-    }
+    console.log("Status:", response.status);
+    const data = await response.json();
+    console.log(data);
+    return marked.parse(data.answer);
+}
 
-    revealSections();
-    window.addEventListener("scroll", revealSections);
-    const header = document.querySelector("header");
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) {
-            header.style.boxShadow =
-                "0 8px 25px rgba(0,0,0,.12)";
+let currentRequest = 0;
+
+async function sendMessage() {
+    const input =
+        document.getElementById(
+            "gaia-question"
+        );
+
+    const text =
+        input.value.trim();
+
+    if (!text) return;
+
+    const messages =
+        document.getElementById(
+            "gaia-messages"
+        );
+
+    messages.innerHTML += `
+<div class="gaia-user">
+${text}
+</div>
+`;
+
+    input.value = "";
+
+    messages.scrollTop =
+        messages.scrollHeight;
+
+    const requestId =
+        ++currentRequest;
+
+    const typingId =
+        "typing-" + Date.now();
+
+    messages.innerHTML += `
+<div class="gaia-bot typing" id="${typingId}">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+`;
+
+    messages.scrollTop =
+        messages.scrollHeight;
+
+    try {
+
+        let answer = "";
+
+        if (
+            greetingReply(text)
+        ) {
+
+            answer = `
+Hello, I am GAIA.
+
+I help explore concepts,
+relationships,
+clusters,
+patterns,
+and connections found within the
+Great Awakening Intelligence Atlas.
+
+Ask me anything about the map.
+`;
+
         } else {
-            header.style.boxShadow =
-                "0 5px 18px rgba(0,0,0,.08)";
-        }
-    });
 
-    const map = document.querySelector(".gaia-map");
-    if (map) {
-        map.addEventListener("mouseenter", () => {
-            map.style.transform = "scale(1.015)";
-        });
-        map.addEventListener("mouseleave", () => {
-            map.style.transform = "scale(1)";
-        });
+            answer =
+                await askGAIA(text);
+
+        }
+
+        if (
+            requestId !==
+            currentRequest
+        ) {
+
+            const bubble =
+                document.getElementById(typingId);
+
+            if (bubble) {
+                bubble.classList.remove("typing");
+                bubble.innerHTML = answer;
+
+            }
+
+            return;
+        }
+
+        const bubble =
+            document.getElementById(
+                typingId
+            );
+
+        if (bubble) {
+            bubble.innerHTML = answer;
+        }
+
+    }
+    catch (error) {
+        console.error(error);
+        const bubble =
+            document.getElementById(typingId);
+        if (bubble) {
+            bubble.innerHTML = `
+        <strong>⚠️ GAIA is temporarily unavailable.</strong>
+
+        <br><br>
+
+        This may happen because:
+
+        <ul>
+            <li>The GAIA backend is not running.</li>
+            <li>The free Gemini API key has reached its usage limit and needs to be updated.</li>
+        </ul>
+
+        <br>
+
+        <a href="mailto:tanujamodakm@email.com?subject=GAIA API Update Request">
+            📩 Click here to notify the administrator
+        </a>
+
+        <br><br>
+
+        Please try again later.
+        `;
+
+        }
+
     }
 
-    const buttons = document.querySelectorAll(
-        ".download-btn, .contact-btn, .resource-btn"
-    );
+    messages.scrollTop =
+        messages.scrollHeight;
 
-    buttons.forEach(button => {
-        button.addEventListener("mouseenter", () => {
-            button.style.transform = "translateY(-4px)";
-        });
+}
 
-        button.addEventListener("mouseleave", () => {
-            button.style.transform = "translateY(0)";
-        });
-    });
-});
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
 
-console.log(
-    "%cGAIA Website Loaded Successfully",
-    "color:#11b5ae;font-size:18px;font-weight:bold;"
+        console.log(
+            "GAIA Website Loaded"
+        );
+
+        const sendBtn =
+            document.getElementById(
+                "send-gaia"
+            );
+
+        const input =
+            document.getElementById(
+                "gaia-question"
+            );
+
+        const chatBtn =
+            document.getElementById(
+                "gaia-chat-btn"
+            );
+
+        const closeBtn =
+            document.getElementById(
+                "close-chat"
+            );
+
+        const chatWindow =
+            document.getElementById(
+                "gaia-chat-window"
+            );
+
+        if (
+            chatBtn &&
+            chatWindow
+        ) {
+
+            chatBtn.addEventListener(
+                "click",
+                () => {
+                    chatWindow.style.display =
+                        "flex";
+                }
+            );
+
+        }
+
+        if (
+            closeBtn &&
+            chatWindow
+        ) {
+
+            closeBtn.addEventListener(
+                "click",
+                () => {
+
+                    chatWindow.style.display =
+                        "none";
+                }
+            );
+        }
+
+        if (sendBtn) {
+            sendBtn.addEventListener(
+                "click",
+                sendMessage
+            );
+        }
+
+        if (input) {
+
+            input.addEventListener(
+                "keydown",
+                function (e) {
+                    if (
+                        e.key === "Enter"
+                    ) {
+                        e.preventDefault();
+                        sendMessage();
+
+                    }
+                }
+            );
+        }
+    }
 );
