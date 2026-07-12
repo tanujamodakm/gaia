@@ -160,7 +160,7 @@ Ask me anything about the map.
             document.getElementById(typingId);
         if (bubble) {
             bubble.innerHTML = `
-        <strong>⚠️ GAIA is temporarily unavailable.</strong>
+        <strong>⚠️ GAIA is temporarily underconstruction.</strong>
 
         <br><br>
 
@@ -168,13 +168,13 @@ Ask me anything about the map.
 
         <ul>
             <li>The GAIA backend is not running.</li>
-            <li>The free Gemini API key has reached its usage limit and needs to be updated.</li>
+            <li>Since, the admin is figuring out a free backend flask hosting site.</li>
         </ul>
 
         <br>
 
         <a href="mailto:tanujamodakm@email.com?subject=GAIA API Update Request">
-            📩 Click here to notify the administrator
+            📩 Click here to notify the administrator if you can help or waiting...
         </a>
 
         <br><br>
