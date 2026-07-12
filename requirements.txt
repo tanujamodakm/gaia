@@ -3,7 +3,7 @@ flask-cors
 pandas
 numpy
 sentence-transformers
-google-generativeai
 python-dotenv
+google-generativeai
 openpyxl
-torch
+gunicorn
