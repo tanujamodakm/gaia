@@ -611,19 +611,16 @@ footer a:hover {
     position: fixed;
     right: 25px;
     bottom: 110px;
-
     width: 400px;
+    max-width: calc(100vw - 30px);
     height: 600px;
-
+    max-height: calc(100vh - 140px);
     display: none;
     flex-direction: column;
-
     background: #fff;
     border-radius: 18px;
     overflow: hidden;
-
-    box-shadow: 0 15px 40px rgba(0, 0, 0, .2);
-
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .20);
     z-index: 999999;
 }
 
@@ -649,40 +646,33 @@ footer a:hover {
     flex: 1;
     overflow-y: auto;
     overflow-x: hidden;
-
-    padding: 15px;
+    padding: 16px;
     background: #f7f7f7;
-
     min-height: 0;
 }
 
 .gaia-user {
-    margin-left: 45px;
+    align-self: flex-end;
+    max-width: 85%;
     margin-bottom: 15px;
     padding: 14px 18px;
-    border-radius: 15px;
     background: #11b5ae;
     color: white;
-    line-height: 1.7;
-    word-wrap: break-word;
+    border-radius: 18px;
+    word-break: break-word;
 }
 
 .gaia-bot {
     align-self: flex-start;
-    width: 100%;
-    max-width: 100%;
-    background: #ffffff;
-    padding: 16px 18px;
+    max-width: 90%;
+    margin-bottom: 14px;
+    padding: 16px;
+    background: white;
     border-radius: 16px;
-    margin-bottom: 12px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, .08);
-    box-sizing: border-box;
     line-height: 1.7;
-    color: #222;
-    overflow-wrap: break-word;
     word-break: break-word;
-    white-space: normal;
-    overflow-x: hidden;
+    overflow-wrap: anywhere;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .08);
 }
 
 .gaia-bot p {
@@ -748,21 +738,19 @@ footer a:hover {
     align-items: center;
     gap: 10px;
     padding: 12px;
-    background: #fff;
+    background: white;
     border-top: 1px solid #e5e5e5;
     flex-shrink: 0;
 }
 
 #gaia-question {
     flex: 1;
-    height: 45px;
-    border: 1px solid #d9d9d9;
+    min-width: 0;
+    height: 46px;
     border-radius: 10px;
+    border: 1px solid #ddd;
     padding: 0 15px;
-    outline: none;
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-    transition: .25s;
+    font-size: 16px;
 }
 
 #gaia-question:focus {
@@ -771,18 +759,9 @@ footer a:hover {
 }
 
 #send-gaia {
-    width: 45px;
-    height: 45px;
-    border: none;
-    border-radius: 10px;
-    background: #11b5ae;
-    color: #fff;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    transition: .25s;
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
 }
 
 #send-gaia:hover {
@@ -818,6 +797,32 @@ footer a:hover {
         box-shadow:
             0 0 5px rgba(17, 181, 174, .08),
             0 0 10px rgba(17, 181, 174, .05);
+    }
+
+}
+
+@media (max-width:768px) {
+
+    #gaia-chat-window {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        width: auto;
+        height: auto;
+        max-width: none;
+        max-height: none;
+        border-radius: 18px;
+        display: none;
+        flex-direction: column;
+    }
+
+    #gaia-chat-btn {
+        width: 62px;
+        height: 62px;
+        right: 18px;
+        bottom: 18px;
+        font-size: 25px;
     }
 
 }
