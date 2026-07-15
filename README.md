@@ -1,6 +1,6 @@
 # <span style="color:#11b5ae;">GAIA</span> ![Website](https://img.shields.io/badge/Live-Website-11b5ae?style=for-the-badge)
 
-**Click here to access the website:** https://gaiacp.netlify.app/
+**Click here to access the website:** https://gaiaatlas.netlify.app/
 
 ---
 
