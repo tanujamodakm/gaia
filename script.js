@@ -35,7 +35,7 @@ function greetingReply(text) {
 
 async function askGAIA(question) {
     console.log("Sending:", question);
-    const API = "https://gaia-nkv5.onrender.com/ask";
+    const API = "https://shopping-cbs-ourselves-seems.trycloudflare.com/ask";
     const response = await fetch(API, {
         method: "POST",
         headers: {
