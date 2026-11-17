@@ -165,26 +165,27 @@ Ask me anything about the map.
         document.getElementById(typingId);
     if (bubble) {
         bubble.innerHTML = `
-        <strong>⚠️ GAIA is temporarily underconstruction.</strong>
-
+        <strong>🌍 GAIA is temporarily offline.</strong>
+        <br><br> I'm sorry! Due to budget constraints, GAIA is currently
+        running on a temporary cloud setup rather than a permanent hosting service.
         <br><br>
-
-        This may happen because:
-
-        <ul>
-            <li>The GAIA backend is not running.</li>
-            <li>Since, the admin is figuring out a free backend flask hosting site.</li>
-        </ul>
-
-        <br>
-
-        <a href="mailto:tanujamodakm@email.com?subject=GAIA API Update Request">
-            📩 Click here to notify the administrator if you can help or waiting...
+        <strong>Would you like to explore the Atlas?</strong>
+        <br><br>
+        The administrator needs to start the GAIA research notebook and activate its temporary server.
+        <br><br>    
+        Once the server is running, GAIA will be available to answer your questions again.
+        <br><br>
+        I promise, GAIA will be here to explore with you
+        whenever the research server is online. 💚
+        <br><br>
+        
+        <a href="mailto:tanujamodakm@email.com?subject=GAIA%20Availability">
+        📩 Contact the GAIA administrator
         </a>
-
         <br><br>
-
-        Please try again later.
+        
+        Thank you for your patience and for being part of the GAIA journey.
+        
         `;
 
         }
